@@ -1,0 +1,17 @@
+.app-container {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.app-header {
+  color: white;
+  background: red;
+  height: 50px;
+  margin: auto;
+  width: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-header h1 {
+  color: #fff;
+}
