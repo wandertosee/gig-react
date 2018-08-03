@@ -11,11 +11,11 @@ const awaitPromise = (msecs) => (
   results => new Promise(resolve => setTimeout(() => resolve(results), msecs))
 );
 
-const jsonLoader = (url, getData) => {
+const jsonLoader = (url, processData) => {
   return fetch(url)
     .then(validateResponse)
     .then(getJson)
-    .then(getData)
+    .then(processData)
     .then(awaitPromise(1));
 };
 

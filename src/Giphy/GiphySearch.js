@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/giphy.css';
 
-export default class SearchInput extends Component {
+export default class GiphySearch extends Component {
   constructor() {
     super();
     this.onSubmit = this.onSubmit.bind(this);
@@ -24,15 +24,11 @@ export default class SearchInput extends Component {
     const { initialQuery } = this.props;
     return (
       <div>
-        <section>
-          <form onSubmit={this.onSubmit} className="search">
-              <input type="text" name="query"  placeholder="Search.." defaultValue={initialQuery} className="searchTerm"/>
-              <button type="submit" className="searchButton">
-                ?
-              </button>
-          </form>
-          <br />
-        </section>
+        <form onSubmit={this.onSubmit} className="search">
+            <input type="text" name="query"  placeholder="Search.." defaultValue={initialQuery} className="searchTerm"/>
+            <button type="submit" className="searchButton">?</button>
+        </form>
+        <br />
       </div>
     );
   }
